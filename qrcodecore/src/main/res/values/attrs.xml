@@ -20,6 +20,7 @@
         <attr name="qrcv_barcodeRectHeight" format="dimension|reference" />
         <!-- 除去扫描框，其余部分阴影颜色，默认值为#33FFFFFF -->
         <attr name="qrcv_maskColor" format="color|reference" />
+        <attr name="qrcv_cornerRadius" format="dimension|reference" />
         <!-- 扫描线的宽度，默认值为1dp -->
         <attr name="qrcv_scanLineSize" format="dimension|reference" />
         <!-- 扫描线的颜色，默认值为@android:color/white -->
@@ -30,6 +31,8 @@
         <attr name="qrcv_isShowDefaultScanLineDrawable" format="boolean" />
         <!-- 扫描线的图片资源，默认值为null -->
         <attr name="qrcv_customScanLineDrawable" format="reference" />
+        <!-- 扫描成功显示的图片资源，默认值为null -->
+        <attr name="qrcv_scanSuccessDrawable" format="reference" />
         <!-- 扫描边框的宽度，默认值为1dp -->
         <attr name="qrcv_borderSize" format="dimension|reference" />
         <!-- 扫描边框的颜色，默认值为@android:color/white -->
@@ -44,6 +47,8 @@
         <attr name="qrcv_isBarcode" format="boolean" />
         <!-- 扫描二维码时的提示文案，默认值为null -->
         <attr name="qrcv_qrCodeTipText" format="string|reference" />
+        <!-- 扫描时的扫描框提示文案，默认值为null -->
+        <attr name="qrcv_frameBottomTipText" format="string|reference" />
         <!-- 扫描条码时的提示文案，默认值为null -->
         <attr name="qrcv_barCodeTipText" format="string|reference" />
         <!-- 提示文案字体大小，默认值为14sp -->
