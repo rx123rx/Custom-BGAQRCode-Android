@@ -11,6 +11,7 @@ import android.graphics.PointF;
 import android.graphics.Rect;
 import android.hardware.Camera;
 import android.os.AsyncTask;
+import android.os.Handler;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
@@ -419,8 +420,13 @@ public abstract class QRCodeView extends RelativeLayout implements Camera.Previe
         }
     }
 
-    void onScanBoxRectChanged(Rect rect) {
-        mCameraPreview.onScanBoxRectChanged(rect);
+    void onScanBoxRectChanged(final Rect rect) {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mCameraPreview.onScanBoxRectChanged(rect);
+            }
+        }, 2000);
     }
 
     @Override
